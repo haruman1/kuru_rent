@@ -29,3 +29,38 @@ const copyToClipboard = (str) => {
     document.getSelection().addRange(selected); // Restore the original selection
   }
 };
+function hitungSelisihTanggal(tahunAwalan, bulanAwalan, tanggalAwalan) {
+  // Tanggal awalan
+  var tanggalAwalan = new Date(tahunAwalan, bulanAwalan - 1, tanggalAwalan); // Bulan dimulai dari 0, sehingga kurangkan 1
+
+  // Tanggal saat ini
+  var tanggalSaatIni = new Date();
+
+  // Menghitung selisih tahun
+  var selisihTahun = tanggalSaatIni.getFullYear() - tanggalAwalan.getFullYear();
+
+  // Jika bulan saat ini lebih kecil dari bulan awalan atau bulan sama tapi tanggal saat ini kurang dari tanggal awalan
+  if (
+    tanggalSaatIni.getMonth() < tanggalAwalan.getMonth() ||
+    (tanggalSaatIni.getMonth() === tanggalAwalan.getMonth() &&
+      tanggalSaatIni.getDate() < tanggalAwalan.getDate())
+  ) {
+    selisihTahun -= 1;
+  }
+
+  // Menghitung selisih bulan
+  var selisihBulan =
+    tanggalSaatIni.getMonth() +
+    12 * tanggalSaatIni.getFullYear() -
+    (tanggalAwalan.getMonth() + 12 * tanggalAwalan.getFullYear());
+
+  // Menghitung selisih hari
+  var selisihHari = tanggalSaatIni.getDate() - tanggalAwalan.getDate();
+
+  // Mengembalikan hasil sebagai objek
+  return {
+    tahun: selisihTahun,
+    bulan: selisihBulan,
+    hari: selisihHari,
+  };
+}
