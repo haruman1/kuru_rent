@@ -64,3 +64,15 @@ function hitungSelisihTanggal(tahunAwalan, bulanAwalan, tanggalAwalan) {
     hari: selisihHari,
   };
 }
+function panggil_hasil(tahun, bulan, tanggal) {
+  var hasil = hitungSelisihTanggal(tahun, bulan, tanggal);
+  document.write(
+    '<strong>Bergabung selama: ' +
+      hasil.tahun +
+      ' tahun, ' +
+      hasil.bulan +
+      ' bulan, dan ' +
+      hasil.hari +
+      ' hari. </strong>'
+  );
+}
