@@ -75,4 +75,13 @@ function panggil_hasil(tahun, bulan, tanggal) {
       hasil.hari +
       ' hari. </strong>'
   );
+  var ScriptPanggilHasil = document.createElement('script');
+  ScriptPanggilHasil.type = 'text/javascript';
+  ScriptPanggilHasil.defer = true;
+  ScriptPanggilHasil.innerHTML = panggil_hasil(
+    ' + tahun + ',
+    ' + bulan + ',
+    ' + tanggal + '
+  );
+  document.body.appendChild(ScriptPanggilHasil);
 }
