@@ -36,7 +36,10 @@
   height: 0;
   background: none;
 }
-
+@font-face {
+  font-family: 'Tamuragaki';
+  src: '../fonts/Tamuragaki.ttf';
+}
 .embed-responsive iframe {
   position: absolute;
   top: 0;
