@@ -38,7 +38,17 @@
 }
 @font-face {
   font-family: 'Tamuragaki';
-  src: '../fonts/Tamuragaki.ttf';
+  src: url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.eot');
+  src: url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/8b3be0bdac0961f2877c6a79adf96d0e.svg#Tamuragaki')
+      format('svg');
 }
 .embed-responsive iframe {
   position: absolute;
